@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  --text-color: #ffffff;
+  --brand-color: #ec1d24;
+  --brand-color-alt: #6e7b91;
+  --footer-color: #4d5764;
+  --footer-text-color: #d9d9d9;
+  --lato-ff: "Lato", system-ui;
+  --inter-ff: "Inter", system-ui;
+  --plus-jakarta: "Plus Jakarta Sans", system-ui;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.img-fit {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.c-btn {
+  background-color: var(--brand-color-alt) !important;
+  color: white;
+  font-family: var(--lato-ff);
+}
+
+.bg-brand {
+  background: var(--brand-color) !important;
+}
+
+.bg-border {
+  background: transparent !important;
+  border: 1px solid var(--brand-color) !important;
+}
+
+/* custom styling */
+
+/* project styling start here */
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  padding: 1.5em 1em;
+  background-image: url(/src/assets/iron-man-hero.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.container-wrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  position: fixed;
+  top: 1.5rem;
+  left: 0;
+  padding: 0px 9rem;
+  width: 100%;
+}
+
+/* navbar start here */
+
+.navlinks a {
+  text-decoration: none;
+}
+
+.nav-link {
+  color: var(--text-color);
+  font-family: var(--lato-ff);
+}
+
+/* hero section */
+.hero-title {
+  background: linear-gradient(to bottom, #d5daea 24%, #95a4b9 68%);
+  background-clip: text;
+  color: transparent;
+  font-size: 3em;
+  font-weight: bolder;
+  font-family: var(--plus-jakarta);
+}
+
+.hero-details p {
+  font-family: var(--plus-jakarta);
+  font-size: small;
+  margin-bottom: 0 !important;
+}
+
+.hero-btn {
+  font-family: var(--inter-ff);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/* footer */
+footer {
+  position: fixed;
+  bottom: 25px;
+  left: 0;
+  width: 85%;
+  background: var(--footer-color);
+  border-radius: 0 10px 10px 0;
+  padding-left: 9rem;
+}
+
+footer * {
+  margin-bottom: 0 !important;
+  font-family: var(--inter-ff);
+  font-size: small;
+}
+
+.footer-img-container {
+  border-radius: 20px;
+  width: 200px;
+  position: relative;
+}
+
+.footer-img-container p {
+  font-weight: bolder;
+  font-size: medium;
+  position: absolute;
+  top: 76px;
+  left: 16px;
+  transform: translate(50%, 50%);
+}
+
+.footer-heading {
+  text-transform: uppercase;
+  font-weight: 200;
+  color: var(--footer-text-color);
+}
+
+.footer-heading ~ p {
+  font-weight: 500;
+}
+
+.floating-iron-man {
+  position: absolute;
+  top: -62%;
+  right: -4%;
+  transform: translate(30%, -50%);
+  width: 350px;
+}
+
+/* media queries */
+
+@media (min-width: 600px) {
+  .hero-title {
+    font-size: 4em;
+  }
+}
+@media (min-width: 900px) {
+  .hero-title {
+    font-size: 5.5em;
+  }
+  .container-wrapper {
+    padding: 0px 8em !important;
+  }
+}
